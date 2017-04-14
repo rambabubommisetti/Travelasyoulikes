@@ -1,0 +1,375 @@
+body {
+       /* background-image: url("2.jpg"); */
+    }
+	.dropwidth{
+		width: 80% !important;
+	}
+	.vehicletablebgcolor{
+		background-color:rgba(252, 248, 227, 0.44);
+	}
+	.vehicletablehederbgcolor{
+		background-color:rgba(71, 255, 23,0.1);
+	}
+    .menucolor{           
+            margin-top: 10px !important;
+            color: white !important;
+            margin-left:20px;
+			margin-right:20px;
+			font-size:16px;
+			font-weight:bolder;
+			font-family: sans-serif;
+    }
+    .header
+    {
+        background-color:rgba(210,250,22,0.6);
+        padding-top:18px;
+        padding-bottom:18px;
+        margin-top: 2px;
+        margin-bottom: 0px;
+    }
+    .headerfont{
+        font-size:30px;		
+        display:inline;
+        font-weight:bolder;
+        font-family:goudy stout;
+        color:white;	
+    }
+    .menubackground{
+        background-color:rgba(53, 5, 53, 0);
+        border:none;
+    }
+	.labelsize{
+	    font-size:18px;
+		margin-top:5px !important;
+		margin-bottom:0px !important;
+	}
+	.headermargin{
+		margin-top:20px;
+		margin-left:10px !important;
+	}
+	.nomarginBottom{
+	  margin-bottom:0px;
+	}
+	.zeropaddingleft{
+	padding-left:0px !important;
+	}
+	.maincontroller{
+	    margin-left: 16px;
+		margin-right: 15px;
+	}
+	/*
+	@media screen and (min-width: 1350px) {
+    .iframe{
+        width: 1366px;
+        height:640px;
+		}
+	}
+	*/
+	.iframe{
+        width: 1366px;
+        height:2000px;
+		}
+	
+	.logo{
+	margin-left:20px;
+	margin-top:10px;
+	width:64%;
+  }
+	.paddingright{
+		padding-right:0px !important;
+	}
+	.paddingleft{
+		padding-left:0px !important;
+	}
+  .homeicon{
+    margin-left:20px;
+	margin-top:10px;
+	width:5%;
+  }
+  .contacticon{
+    margin-left:20px;
+	margin-top:10px;
+	width:5%;
+  }
+  @media screen and (min-width:1300px) {
+	   .logo{
+		margin-left:20px;
+		margin-right:560px;
+		margin-top:10px;
+		width:40%;
+	  }
+	 
+	}
+	@media screen and (min-width:1300px) {
+		 .menubar>li>a{
+			color:#FFFFFF !important;
+			font-size:18px !important;
+		}
+	}
+	@media screen and (max-width:1200px) {
+		 .menubar>li>a{
+			color:#000000 !important;
+			font-size:13px !important;
+			font-weight:bold !important;
+		}
+	}
+	@media screen and (min-width:1020px) and (max-width:1100px){
+		 .menubar>li>a{
+			color:#000000 !important;
+			font-size:11px !important;
+		}
+	}
+  .ruler{
+   height:4px;
+   background-color:#d61f6b;
+   margin-top:4px !important;
+  }
+  .rowmargin{
+	margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+
+  .menunavbar{	
+	/* background: #bfd255; 
+	background: -moz-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+	background: -webkit-linear-gradient(top, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
+	background: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); */
+	background-color:rgba(255,255,255,0) !important;
+    border: none !important; 
+  }
+
+  .menubar>li>a:hover{
+	color: green !important;
+    background-color:#FFFFFF !important;
+	border-radius: 2em !important;
+  }
+  .active{
+	color: green !important;
+    background-color:rgba(0,128,0,0.8) !important;
+	border-radius: 2em !important;
+  }
+  .menunavbar .navbar-toggle:hover{
+    background-color:rgba(255,255,255,0) !important;
+  }
+  .menunavbar .navbar-toggle:focus{
+	background-color:rgba(255,255,255,0) !important;
+  }
+  .contentmargin{
+	margin-left: 0px;
+    margin-right: 0px;
+    margin-top: -20px;
+  }
+  .carousel-inner>.item>a>img, .carousel-inner>.item>img{
+		margin-left:3% !important;
+		width:94% !important;
+	}
+	.left{
+    width:3% !important;
+	}
+	.right{
+     width:3% !important;
+	}
+
+	@media screen and (min-width:1300px) {
+			.quicklinks{
+		width:100% !important;
+		}
+	}
+	@media screen and (max-width:1200px) {
+			.quicklinks{
+		width:87% !important;
+		}
+	}
+	.paddingzero{
+		padding:0px;
+	}
+	.menuItemPadding{
+	  padding-top:8px !important;
+	  padding-bottom:8px !important;
+	}
+	.menuItemList{
+		rgba(25, 138, 234, 0.62) !important;
+		margin-left: 6px !important;
+		margin-top: 10px !important;
+		margin-bottom: 10px !important;
+		border: 2px solid white !important;
+		border-radius: 2em !important;
+	}
+	html{
+	background: url(formback3.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	}
+	.mytable{
+	 border:2px solid #000 !important;
+	}	
+	.mytable>thead>tr>th{
+	 border:2px solid #000 !important;
+	}
+	.mytable>tbody>tr>td{
+	 border:2px solid #000 !important;
+	}
+	.nomarginBottom{
+		margin-bottom:0px !important;
+	}
+	.searchdiv{
+		background-color: rgba(252, 248, 227, 0.55) !important;
+		border-radius: 12px !important;
+		margin:-2px !important;
+	}
+	.formdiv{
+		    background-color: rgba(245, 245, 245,0.62) !important;
+			border-radius: 12px !important;
+			padding-left: 10% !important;
+			padding-right: 4% !important;
+	}
+	.formheader{
+		margin-top: 2% !important;
+		margin-bottom: 2% !important;
+		padding: 2% 2% 2% 32% !important;
+		background: rgba(21, 3, 42, 0.76) !important;
+		color: #FFF !important;
+		border-radius: 10px !important;
+	}
+	
+	.passengerformheader{   
+		margin-top: 2% !important;
+		margin-bottom: 2% !important;
+		padding: 2% 2% 2% 22% !important;
+		background-color:rgba(230, 153, 74, 0.97) !important;
+		color: #FFF !important;
+		border-radius: 10px !important;
+	}
+	.passengerdata{
+		background-color: rgba(230, 153, 74, 0) !important;
+		color: #000 !important;
+		border-radius: 4px !important;
+		margin-top: 0.5%;
+		margin-left: -0.1rem;
+		margin-right: -0.1rem;
+	}
+	.vehicledatabanner{
+		background-color: rgba(230, 37, 145,0) !important;
+		color: #000 !important;
+		border-radius: 4px !important;
+		margin-top: 0.5%;
+		margin-left: -0.1rem;
+		margin-right: -0.1rem;
+	}
+	.dropwidth{
+	   width:100% !important;
+	}
+	.formdiv label{
+		font-size:14px !important;
+	}
+	.nomarginBottom{
+		margin-bottom:0px !important;
+	}
+	.inputmarginBottom{
+	  margin-bottom:1% !important;
+	}
+	.fontbolder{
+	 font-weight:bolder !important;
+	}
+	.homecontent{
+		background-color: rgba(115, 45, 45, 0.21) !important;
+		padding: 1% 1% 1% 2.6% !important;
+		margin-left: 0.01rem !important;
+		margin-right: 0.01rem !important;
+		border-radius:8px;
+	}
+	.headertext{
+	    font-weight: bolder;
+		text-transform: uppercase;
+		color:#FFF;
+		text-align:center;
+	}
+	.connectingpeopletext{
+	    font-size: 22px !important;
+		text-align: center !important;
+		color: #150329 !important;
+		font-weight: bolder !important;
+		text-transform: uppercase !important;
+	}
+	@media screen and (min-width:1200px) {
+		.connectingpeolpe
+		{
+			background-color: rgba(76, 233, 103, 0.52);
+			margin-left: 1rem;
+			border: 2px solid white;
+			border-radius: 28px;
+			width:30% !important;
+			margin-left:2.4rem;
+		}
+		.sharevehicle{
+			margin-left: 1rem;
+			border: 2px solid white;
+			border-radius: 28px;
+			width:30% !important;
+			margin-left:2.4rem;
+			background-color: rgba(255, 168, 19, 0.4);
+		}
+		.sharejourney
+		{
+			background-color: rgba(238, 238, 238, 0.11);
+			margin-left: 1rem;
+			border: 2px solid white;
+			border-radius: 28px;
+			width:30% !important;
+			margin-left:2.4rem;
+		}	
+		.saharerideimage{
+			height:24rem !important;
+			margin-left:5rem !important;
+		}
+	}
+	
+	@media screen and (max-width:1200px) {
+		.connectingpeolpe
+		{
+			background-color: rgba(76, 233, 103, 0.52);
+			border: 2px solid white;
+			border-radius: 28px;
+			width:93% !important;
+			margin-left:2.4rem;
+			margin-right:2.4rem;
+			margin-top:2rem;
+		}
+		.sharevehicle{
+			border: 2px solid white;
+			border-radius: 28px;
+			width:93% !important;
+			margin-left:2.4rem;
+			margin-right:2.4rem;
+			background-color: rgba(255, 168, 19, 0.7);
+			margin-top:2rem;
+		}
+		.sharejourney
+		{
+			background-color: rgba(238, 238, 238, 0.11);
+			border: 2px solid white;
+			border-radius: 28px;
+			width:93% !important;
+			margin-left:2.4rem;
+			margin-top:2rem;
+			margin-right:2.4rem;
+		}	
+		.saharerideimage{
+			height:40rem !important;
+			margin-left:2rem !important;
+		}
+		.connectimage{
+			height:40rem !important;
+			margin-left:12rem !important;
+		}
+		.maxwidth{
+		   width:100% !important;
+	   }
+	   .maxwidthdate{
+			 width:150% !important;
+		}	   
+	}
+
+	
