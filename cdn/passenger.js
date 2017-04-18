@@ -281,7 +281,6 @@
  app.directive('googleplace', function() {
 	return {
 		require: 'ngModel',
-		restrict:'C',
 		link: function(scope, element, attrs, model) {
 			var options = {
 				types: [],
