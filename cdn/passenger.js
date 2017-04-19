@@ -68,7 +68,7 @@
 			  destination: directions.destination,
 			  travelMode: google.maps.DirectionsTravelMode.DRIVING
 			};
-			$scope.directionsService.route(request, function (response, status) {
+			directionsService.route(request, function (response, status) {
 			  if (status === google.maps.DirectionsStatus.OK) {
 				directionsDisplay.setDirections(response);
 				directionsDisplay.setMap($scope.map.control.getGMap());
