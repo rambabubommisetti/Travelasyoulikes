@@ -3,11 +3,11 @@
    <link rel="stylesheet" href="cdn/pure-min.css">
    <link rel="stylesheet" href="cdn/bootstrap.min.css">
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="cdn/fontawsome.css">
    <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/style.css">
+    <link rel="stylesheet" href="cdn/fontawsome.css">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <style>
-    .footer {
+   .footer {
 	  position: fixed;
 	  right: 0;
 	  bottom: 0;
@@ -18,7 +18,7 @@
 	  background-color: rgba(136, 15, 115, 0.73);
 	  text-align: center;
 	}
-   .radiogroup{
+    .radiogroup{
 	    margin-top: 4.8rem;
 		background-color: white;
 		margin-left: 1.8rem;
@@ -511,23 +511,28 @@
                     <div class="col-xs-8 col-xs-offset-2">
                       <img ng-src="" class="img-rounded img-responsive" style="width:60%">                 
                     </div>
-					<div class="row">
-						<div class="col-md-12">
-							<ul class="list-group displaylistdata">
-								<li class="list-group-item"><strong>Passenger Name:&nbsp;&nbsp;</strong>{{activePassenger.pname}}</li>
-								<li class="list-group-item"><strong>Gender:&nbsp;&nbsp;</strong>{{activePassenger.pgender}}</li>
-								<li class="list-group-item"><strong>Mobile:&nbsp;&nbsp;</strong>{{activePassenger.pmobile}}</li>
-								<li class="list-group-item"><strong>Email Id:&nbsp;&nbsp;</strong>{{activePassenger.email}}</li>
-								<li class="list-group-item"><strong>Source:&nbsp;&nbsp;</strong>{{activePassenger.psource}}</li>
-								<li class="list-group-item"><strong>Destination:&nbsp;&nbsp;</strong>{{activePassenger.pdestination}}</li>
-								<li class="list-group-item"><strong>Journey Date:&nbsp;&nbsp;</strong>{{activePassenger.pjdate}}</li>
-								<li class="list-group-item"><strong>Passenger Comment:&nbsp;&nbsp;</strong>{{activePassenger.pcomment}}</li>
-							</ul>                                        
-						</div>
-					 </div>
-					 <div class="row">
-						<button class="btn btn-danger pull-right buttonmargin" data-dismiss="modal">Close</button>
-					 </div>
+		<div class="row">
+		  <div class="col-md-12">
+			<ul class="list-group displaylistdata">
+				<li class="list-group-item"><strong>Passenger Name:&nbsp;&nbsp;</strong>{{activePassenger.pname}}</li>
+				<li class="list-group-item"><strong>Gender:&nbsp;&nbsp;</strong>{{activePassenger.pgender}}</li>
+				<li class="list-group-item"><strong>Mobile:&nbsp;&nbsp;</strong>{{activePassenger.pmobile}}</li>
+				<li class="list-group-item"><strong>Email Id:&nbsp;&nbsp;</strong>{{activePassenger.email}}</li>
+				<li class="list-group-item"><strong>Source:&nbsp;&nbsp;</strong>{{activePassenger.psource}}</li>
+				<li class="list-group-item"><strong>Destination:&nbsp;&nbsp;</strong>{{activePassenger.pdestination}}</li>
+				<li class="list-group-item"><strong>Journey Date:&nbsp;&nbsp;</strong>{{activePassenger.pjdate}}</li>
+				<li class="list-group-item"><strong>Passenger Comment:&nbsp;&nbsp;</strong>{{activePassenger.pcomment}}</li>
+			</ul>                                        
+		  </div>
+		  <div class="panel-body">
+		    <google-map control="map.control" center="map.center" zoom="map.zoom">
+			<marker coords="marker.center"></marker>
+		    </google-map>						
+		   </div>
+		 </div>
+		 <div class="row">
+			<button class="btn btn-danger pull-right buttonmargin" data-dismiss="modal">Close</button>
+		 </div>
                 </div>
                 </div>
                 </div>
@@ -546,22 +551,24 @@
 	 <script src="cdn/jquery.min.js"></script>
          <script src="cdn/bootstrap.min.js"></script>
          <script src="cdn/angular.js"></script>
-	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVyRY_k1elqUv3o1LntIZ09DdvOSHH-ks&libraries=places"></script>
+	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVyRY_k1elqUv3o1LntIZ09DdvOSHH-ks&libraries=places&v=3.27"></script>
          <script src="cdn/angular-animate.js"></script>
          <script src="cdn/angular-sanitize.js"></script>
          <script src="cdn/ui-bootstrap-tpls-2.5.0.js"></script>
-	<script src="cdn/passenger.js">  </script>
-	<script>
-	$(document).ready(function () {
+	 <script data-require="lodash-underscore@*" data-semver="2.4.1" src="https://rawgit.com/lodash/lodash/2.4.1/dist/lodash.underscore.min.js"></script>
+         <script data-require="angular-google-maps@*" data-semver="1.1.4" src="https://rawgit.com/nlaplante/angular-google-maps/1.1.4/dist/angular-google-maps.min.js"></script>
+	 <script src="cdn/passenger.js">  </script>
+	 <script>
+	 $(document).ready(function () {
 			$("body").on("contextmenu",function(e){
 				return false;
 			});
 		}); 
-   $('.navbar-collapse ul li a').click(function() {
-        $('.navbar-toggle:visible').click();
-    });
-	$(document).ready(function(){
-	  $('ul li a').click(function(){
+         $('.navbar-collapse ul li a').click(function() {
+         $('.navbar-toggle:visible').click();
+         });
+	 $(document).ready(function(){
+	        $('ul li a').click(function(){
 		$('li a').removeClass("active");
 		$(this).addClass("active");
 	});
