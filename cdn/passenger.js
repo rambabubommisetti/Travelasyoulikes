@@ -7,12 +7,10 @@
  
  //https://angular-ui.github.io/bootstrap/  date picker 
  
- var app=angular.module("travelApplication",['ngAnimate','ngSanitize','ui.bootstrap']);
+ var app=angular.module("travelApplication",['ngAnimate','ngSanitize','ui.bootstrap','google-maps']);
  app.controller('passengerCtrl',function($scope,$http,$log,$filter){
-	$scope.lat = undefined;
-    $scope.lng = undefined;
 	$scope.vehicleformdata={vname:'',vmobile:'',vjdate:'',vsource:'',dlicence:'',vdestination:'',vnumberseats:'',vcomments:'',vvehicletype:'',vvehiclenumber:''};		
-    $scope.searchvehicle={jdate:'',source:'',destination:'',jdate1:''};
+        $scope.searchvehicle={jdate:'',source:'',destination:'',jdate1:''};
 	$scope.searchpassenger={pjdate:'',psource:'',pdestination:''};	
 	$scope.otp=Math.floor(1000 + Math.random() * 9000);
 	$scope.firstTimeLogin=true;
@@ -22,6 +20,27 @@
 	$scope.pgender={};
 	$scope.menuname='';
 	$scope.email={'vholderemail':"",'pasengermail':""};
+	/* Declaring Google Map objects  Start*/
+	 // map object
+	$scope.map = {
+		control: {},
+		center: {
+			latitude: -37.812150,
+			longitude: 144.971008
+		},
+		zoom: 14
+	};  		  
+	  // marker object
+	$scope.marker = {
+		center: {
+			latitude: -37.812150,
+			longitude: 144.971008
+		}
+	}
+	var directionsDisplay = new google.maps.DirectionsRenderer();
+	var directionsService = new google.maps.DirectionsService(); 
+	var geocoder = new google.maps.Geocoder();
+	/* Declaring Google Map objects  End*/
 	/* Declaring Menu Value  Start*/
 		$scope.homeData=true;
 		$scope.displaypassengerform=false;
@@ -39,9 +58,26 @@
 			$scope.activeVehicle = index;
 		}  
 		$scope.changeActivePassenger=function(index){
-			$scope.activePassenger = index;
+			$scope.activePassenger = index;			
+		    	var directions = {  };
+		    	directions.origin=$scope.activePassenger.psource;
+		    	directions.destination=$scope.activePassenger.pdestination;
+		  	// get directions using google maps api
+			var request = {
+			  origin: directions.origin,
+			  destination: directions.destination,
+			  travelMode: google.maps.DirectionsTravelMode.DRIVING
+			};
+			$scope.directionsService.route(request, function (response, status) {
+			  if (status === google.maps.DirectionsStatus.OK) {
+				directionsDisplay.setDirections(response);
+				directionsDisplay.setMap($scope.map.control.getGMap());
+			  } else {
+				alert('Google route unsuccesfull!');
+			  }
+			});
 		}  
-    /* Code For displaying Complete details of passenger and also Vehicle End */
+         /* Code For displaying Complete details of passenger and also Vehicle End */
 	
 	/*Code For Change Cursor as pointer Start */
 		$(".hometile").hover(function() {
